@@ -12,7 +12,7 @@ echo https://github.com/sciAndrew/SciFileShare >> "P:\SciFileShare\1 SciFileShar
 :start
 if %TIME:~3,2%==00 ( del /f /q /s P:\SciFileShare\ && timeout 60 && goto restart )
 echo %cooldown%
-timeout 20
+timeout 10
 if %cooldown% gtr 0 ( set /A cooldown=%cooldown%-1 )
 if not exist P:\SciFileShare\ ( mkdir P:\SciFileShare )
 if not exist P:\SciFileShare\%USERNAME%_list.txt ( dir /B H:\SciFileShare\ > P:\SciFileShare\%USERNAME%_FileList.txt )
@@ -20,12 +20,10 @@ if exist P:\SciFileShare\%USERNAME%RQ.txt ( goto process ) else ( goto start )
 
 :process
 
-set /A cooldown=%cooldown%+10
-
 set /p requested=<P:\SciFileShare\%USERNAME%RQ.txt
 del /q P:\SciFileShare\%USERNAME%RQ.txt
 
-if exist "H:\SciFileShare\%requested%" ( copy "H:\SciFileShare\%requested%" P:\ )
+if exist "H:\SciFileShare\%requested%" ( copy "H:\SciFileShare\%requested%" P:\ && set /A cooldown=%cooldown%+10)
 
 ::echo %USERNAME% > "P:\SciFileShare\%USERNAME% on cooldown"
 
