@@ -4,9 +4,9 @@ set cooldown=0
 if not exist H:\SciFileShare\ ( mkdir H:\SciFileShare )
 if not exist P:\SciFileShare\ ( mkdir P:\SciFileShare )
 
-echo aby pobraæ plik od kogoœ stwórz w folderze SciFileShare plik w ten sposób [u¿ytkownik udostêpniaj¹cy plik]RQ.txt > "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
-echo np.andrewRQ.txt . w œrodku teko pliku piszesz nazwê pliku który chcesz pobraæ, ten plik powinien siê pojawiæ na publicu  >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
-echo aby wystawiaæ pliki do pobrania i po wiencej instrukcji zobacz na githuba >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
+echo aby pobrac plik od kogos stworz w folderze SciFileShare plik w ten sposob [uzytkownik udostepniajocy plik]RQ.txt > "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
+echo np.andrewRQ.txt . w srodku teko pliku piszesz nazwe pliku ktory chcesz pobrac, ten plik powinien sie pojawic na publicu  >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
+echo aby wystawiac pliki do pobrania i po wiencej instrukcji zobacz na githuba >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
 echo https://github.com/sciAndrew/SciFileShare >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
 
 :start
@@ -25,7 +25,7 @@ set /A cooldown=%cooldown%+10
 set /p requested=<P:\SciFileShare\%USERNAME%RQ.txt
 del /q P:\SciFileShare\%USERNAME%RQ.txt
 
-if exist H:\SciFileShare\%requested% ( copy "H:\SciFileShare\%requested%" P:\ )
+if exist "H:\SciFileShare\%requested%" ( copy "H:\SciFileShare\%requested%" P:\ )
 
 ::echo %USERNAME% > "P:\SciFileShare\%USERNAME% on cooldown"
 
