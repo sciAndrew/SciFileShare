@@ -2,10 +2,10 @@
 set cooldown=0
 if not exist H:\FileShare\ ( mkdir H:\FileShare )
 
-echo aby pobraæ plik od kogoœ stwórz w folderze FileShare plik w ten sposób [u¿ytkownik udostêpniaj¹cy plik]RQ.txt > "P:\FileShare\FileShare instrukca obs³ugi.txt"
-echo np.andrewRQ.txt . w œrodku teko pliku piszesz nazwê pliku który chcesz pobraæ, ten plik powinien siê pojawiæ na publicu  >> "P:\FileShare\FileShare instrukca obs³ugi.txt"
-echo aby wystawiaæ pliki do pobrania i po wiencej instrukcji zobacz na githuba >> "P:\FileShare\FileShare instrukca obs³ugi.txt"
-echo [link do githuba] >> "P:\FileShare\FileShare instrukca obs³ugi.txt"
+echo aby pobraæ plik od kogoœ stwórz w folderze FileShare plik w ten sposób [u¿ytkownik udostêpniaj¹cy plik]RQ.txt > "P:\FileShare\1 FileShare instrukca obs³ugi.txt"
+echo np.andrewRQ.txt . w œrodku teko pliku piszesz nazwê pliku który chcesz pobraæ, ten plik powinien siê pojawiæ na publicu  >> "P:\FileShare\1 FileShare instrukca obs³ugi.txt"
+echo aby wystawiaæ pliki do pobrania i po wiencej instrukcji zobacz na githuba >> "P:\FileShare\1 FileShare instrukca obs³ugi.txt"
+echo https://github.com/sciAndrew/SciFileShare >> "P:\FileShare\1 FileShare instrukca obs³ugi.txt"
 
 :start
 if %TIME:~3,2%==00 ( del /f /q /s P:\FileShare\ && timeout 60 )
