@@ -12,7 +12,7 @@ echo aby wystawiac pliki do pobrania i po wiencej instrukcji zobacz na githuba >
 echo https://github.com/sciAndrew/SciFileShare >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
 
 :start
-if %TIME:~3,2%==00 ( del /f /q /s P:\SciFileShare\ && timeout 60 && goto restart )
+if %TIME:~3,2%==00 ( if exist P:\SciFileShare ( del /f /q /s P:\SciFileShare\ ) else ( timeout 60 && goto restart ) )
 echo %cooldown%
 timeout 20
 if %cooldown% gtr 0 ( set /A cooldown=%cooldown%-1 )
