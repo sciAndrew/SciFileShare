@@ -1,3 +1,4 @@
+title version 1.1
 :restart
 @echo off
 set cooldown=0
@@ -12,9 +13,9 @@ echo aby wystawiac pliki do pobrania i po wiencej instrukcji zobacz na githuba >
 echo https://github.com/sciAndrew/SciFileShare >> "P:\SciFileShare\1 SciFileShare jak uzywac.txt"
 
 :start
-if %TIME:~3,2%==00 ( if exist P:\SciFileShare ( del /f /q /s P:\SciFileShare\ ) else ( timeout 60 && goto restart ) )
+if %TIME:~3,2%==00 ( if exist P:\SciFileShare ( rmdir /q /s P:\SciFileShare\ && timeout 60 && goto restart ) else ( timeout 60 && goto restart ) )
 echo %cooldown%
-timeout 20
+timeout 10
 if %cooldown% gtr 0 ( set /A cooldown=%cooldown%-1 )
 if not exist P:\SciFileShare\ ( goto restart )
 if not exist P:\SciFileShare\%USERNAME%_list.txt ( dir /B H:\SciFileShare\ > P:\SciFileShare\%USERNAME%_FileList.txt )
